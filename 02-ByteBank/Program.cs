@@ -10,18 +10,16 @@ namespace _02_ByteBank
     {
         static void Main( string[ ] args )
         {
-            ContaCorrente primeiraContaCorrente = new ContaCorrente();
-            primeiraContaCorrente.saldo = 200;
-            Console.WriteLine(primeiraContaCorrente.saldo);
+            ContaCorrente conta = new ContaCorrente();
 
-            primeiraContaCorrente.saldo += 100;
-            Console.WriteLine( primeiraContaCorrente.saldo );
+            conta.titular = "Gabriela";
+            Console.WriteLine( "Saldo: " + conta.saldo );
 
-            ContaCorrente segundaContaCorrente = new ContaCorrente();
-            segundaContaCorrente.saldo = 50;
-            
-            Console.WriteLine($"Primeira Conta tem: {primeiraContaCorrente.saldo}");
-            Console.WriteLine($"Segunda Conta tem: {segundaContaCorrente.saldo}");
+            conta.saldo = 200;
+
+            Console.WriteLine( conta.titular );
+            Console.WriteLine( "Agência: " + conta.agencia );
+            Console.WriteLine( "Saldo: " + conta.saldo );
         }
     }
 }
